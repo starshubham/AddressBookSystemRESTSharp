@@ -47,5 +47,6 @@ namespace AddressBookSystemRESTSharp
                 Console.WriteLine($"Id: {c.Id}\tFullName: {c.FirstName} {c.LastName}\tPhoneNo: {c.PhoneNumber}\tAddress: {c.Address}\tCity: {c.City}\tState: {c.State}\tZip: {c.Zip}\tEmail: {c.Email}");
             }
         }
+
     }
 }
