@@ -1,0 +1,26 @@
+{
+    "Contacts": [
+      {
+        "id": 1,
+        "firstname": "Shubham",
+        "lastname": "Seth",
+        "PhoneNumber": "8788616249",
+        "address": "Patrahi",
+        "city": "Jaunpur",
+        "state": "UP",
+        "zip": "222105",
+        "email": "shubham@gmail.com"
+      },
+      {
+        "id": 2,
+        "firstname": "Sumit",
+        "lastname":"Rawat",
+        "PhoneNumber": "9878616248",
+        "address": "Basti",
+        "city": "Gorakhpur",
+        "state": "UP",
+        "zip": "412105",
+        "email": "sumit@gmail.com"
+      }    
+    ]
+  }

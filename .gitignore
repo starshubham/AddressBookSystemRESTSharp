@@ -1,0 +1,6 @@
+.vs/
+bin/
+obj/
+AddressBookSystemRESTSharp.sln
+AddressBookSystemRESTSharp.csproj
+TestResults/
