@@ -93,5 +93,39 @@ namespace AddressBookSystemRESTSharp
             }
         }
 
+        /* UC24:- Ability to Update Entry in Address Book JSONServer and sync with Address Book Application Memory. 
+                  - Use RESTSharp for REST Api Calls from MSTest Test Code.
+        */
+
+        [TestMethod]
+        public void OnCallingPutAPI_ReturnContactObjects()
+        {
+            //Arrange
+            //Initialize the request for PUT to add new employee
+            RestRequest request = new RestRequest("/Contacts/4", Method.Put);
+            JObject jsonObj = new JObject();
+            jsonObj.Add("firstname", "Chanda");
+            jsonObj.Add("lastname", "Devi");
+            jsonObj.Add("PhoneNumber", "9855669988");
+            jsonObj.Add("address", "Patahi");
+            jsonObj.Add("city", "Jaunpur");
+            jsonObj.Add("state", "UP");
+            jsonObj.Add("zip", "222205");
+            jsonObj.Add("email", "chanda@gmail.com");
+            //Added parameters to the request object such as the content-type and attaching the jsonObj with the request
+            request.AddParameter("application/json", jsonObj, ParameterType.RequestBody);
+
+            //Act
+            RestResponse response = client.ExecuteAsync(request).Result;
+
+            //Assert
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            Contact contact = JsonConvert.DeserializeObject<Contact>(response.Content);
+            Assert.AreEqual("Chanda", contact.FirstName);
+            Assert.AreEqual("Devi", contact.LastName);
+            Assert.AreEqual("222205", contact.Zip);
+            Console.WriteLine(response.Content);
+        }
+
     }
 }
