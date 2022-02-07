@@ -67,18 +67,10 @@ namespace AddressBookSystemRESTSharp
             {
                 //Initialize the request for POST to add new contact
                 RestRequest request = new RestRequest("/Contacts", Method.Post);
-                JObject jsonObj = new JObject();
-                jsonObj.Add("firstname", v.FirstName);
-                jsonObj.Add("lastname", v.LastName);
-                jsonObj.Add("PhoneNumber", v.PhoneNumber);
-                jsonObj.Add("address", v.Address);
-                jsonObj.Add("city", v.City);
-                jsonObj.Add("state", v.State);
-                jsonObj.Add("zip", v.Zip);
-                jsonObj.Add("email", v.Email);
+                request.RequestFormat = DataFormat.Json;
 
                 //Added parameters to the request object such as the content-type and attaching the jsonObj with the request
-                request.AddParameter("application/json", jsonObj, ParameterType.RequestBody);
+                request.AddBody(v);
 
                 //Act
                 RestResponse response = client.ExecuteAsync(request).Result;
@@ -103,17 +95,20 @@ namespace AddressBookSystemRESTSharp
             //Arrange
             //Initialize the request for PUT to add new employee
             RestRequest request = new RestRequest("/Contacts/4", Method.Put);
-            JObject jsonObj = new JObject();
-            jsonObj.Add("firstname", "Chanda");
-            jsonObj.Add("lastname", "Devi");
-            jsonObj.Add("PhoneNumber", "9855669988");
-            jsonObj.Add("address", "Patahi");
-            jsonObj.Add("city", "Jaunpur");
-            jsonObj.Add("state", "UP");
-            jsonObj.Add("zip", "222205");
-            jsonObj.Add("email", "chanda@gmail.com");
-            //Added parameters to the request object such as the content-type and attaching the jsonObj with the request
-            request.AddParameter("application/json", jsonObj, ParameterType.RequestBody);
+            request.RequestFormat = DataFormat.Json;
+
+            request.AddBody(new Contact
+            {
+                FirstName = "Chanda",
+                LastName = "Devi",
+                PhoneNumber = "9855669988",
+                Address = "Patahi",
+                City = "Jaunpur",
+                State = "UP",
+                Zip = "222205",
+                Email = "chanda@gmail.com"
+            }) ;
+            
 
             //Act
             RestResponse response = client.ExecuteAsync(request).Result;

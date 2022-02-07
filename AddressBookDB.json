@@ -23,10 +23,26 @@
       "email": "sumit@gmail.com"
     },
     {
-      "id": 3
+      "id": 3,
+      "firstName": "Priyanshu",
+      "lastName": "Singh",
+      "phoneNumber": "789456123",
+      "address": "Pandeypur",
+      "city": "Varanasi",
+      "state": "UP",
+      "zip": "229554",
+      "email": "ps@gmail.com"
     },
     {
-      "id": 4
+      "id": 4,
+      "firstName": "Chanda",
+      "lastName": "Devi",
+      "phoneNumber": "9855669988",
+      "address": "Patahi",
+      "city": "Jaunpur",
+      "state": "UP",
+      "zip": "222205",
+      "email": "chanda@gmail.com"
     }
   ]
 }
