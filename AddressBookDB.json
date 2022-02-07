@@ -23,13 +23,37 @@
       "email": "sumit@gmail.com"
     },
     {
-      "id": 3
+      "id": 3,
+      "firstName": "Priyanshu",
+      "lastName": "Singh",
+      "phoneNumber": "789456123",
+      "address": "Pandeypur",
+      "city": "Varanasi",
+      "state": "UP",
+      "zip": "229554",
+      "email": "ps@gmail.com"
     },
     {
-      "id": 4
+      "id": 4,
+      "firstName": "Vishal",
+      "lastName": "Seth",
+      "phoneNumber": "781654987",
+      "address": "Charashu Chauraha",
+      "city": "Jaunpur",
+      "state": "UP",
+      "zip": "442206",
+      "email": "vs@gmail.com"
     },
     {
-      "id": 5
+      "id": 5,
+      "firstName": "Ekta",
+      "lastName": "Kumbhare",
+      "phoneNumber": "7856239865",
+      "address": "Bajaj Nagar",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "zip": "442203",
+      "email": "ek@gmail.com"
     }
   ]
 }
