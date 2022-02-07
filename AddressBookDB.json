@@ -35,14 +35,25 @@
     },
     {
       "id": 4,
-      "firstName": "Chanda",
-      "lastName": "Devi",
-      "phoneNumber": "9855669988",
-      "address": "Patahi",
+      "firstName": "Vishal",
+      "lastName": "Seth",
+      "phoneNumber": "781654987",
+      "address": "Charashu Chauraha",
       "city": "Jaunpur",
       "state": "UP",
-      "zip": "222205",
-      "email": "chanda@gmail.com"
+      "zip": "442206",
+      "email": "vs@gmail.com"
+    },
+    {
+      "id": 5,
+      "firstName": "Ekta",
+      "lastName": "Kumbhare",
+      "phoneNumber": "7856239865",
+      "address": "Bajaj Nagar",
+      "city": "Pune",
+      "state": "Maharashtra",
+      "zip": "442203",
+      "email": "ek@gmail.com"
     }
   ]
 }
